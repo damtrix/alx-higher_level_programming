@@ -1,6 +1,0 @@
-#!/usr/bin/python3
-
-class Rectangle:
-    """ An empty string that defines a rectangle"""
-
-    pass
