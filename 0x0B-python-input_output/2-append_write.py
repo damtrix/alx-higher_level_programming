@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This module appends a text to the end of a text file"""
+"""This module defines a file-appending function."""
 
 
 def append_write(filename="", text=""):
-    """Function that appends a text to the end of a text file"""
-    with open(filename, mode="a", encoding="utf-8") as myFile:
-        return myFile.write(text)
+    """Appends a string to the end of a UTF8 text file
+    """
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
