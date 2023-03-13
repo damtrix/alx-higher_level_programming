@@ -2,8 +2,8 @@
 
 const len = process.argv.length;
 
-if (len <= 2) {
-  console.log('No argument');
+if (len > 2) {
+  console.log('Argument' + (len > 3 ? 's' : '') + ' found');
 } else {
-  console.log('Argment' + (len > 3 ? 's' : '') + ' found');
+  console.log('No argument');
 }
