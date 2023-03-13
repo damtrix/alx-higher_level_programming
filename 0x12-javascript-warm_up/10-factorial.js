@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function factorial(n) {
+function factorial (n) {
   if (n === 0 || isNaN(n)) {
     return 1;
   } else {
@@ -8,5 +8,5 @@ function factorial(n) {
   }
 }
 
-let n = Number(process.argv[2]);
+const n = Number(process.argv[2]);
 console.log(factorial(n));
