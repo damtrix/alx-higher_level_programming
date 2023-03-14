@@ -8,7 +8,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       let character = '';
       for (let j = 0; j < this.width; j++) {
@@ -18,13 +18,13 @@ class Rectangle {
     }
   }
 
-  rotate() {
+  rotate () {
     const temp = this.width;
     this.width = this.height;
     this.height = temp;
   }
 
-  double() {
+  double () {
     this.width = 2 * this.width;
     this.height = 2 * this.height;
   }
