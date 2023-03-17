@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     datas = session.query(City, State).join(State)
 
-    for city, state in datas.all():
+    for state in datas.all():
         print('{}: ({}) {}'.format(state.name, city.id, city.name))
 
     session.commit()
