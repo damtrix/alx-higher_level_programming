@@ -14,12 +14,12 @@ if __name__ == '__main__':
     Access to the database and get the states
     from the database.
     """
-    
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
-    
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(argv[1], argv[2], argv[3]))
+
     Session = sessionmaker(bind=engine)
-    
     session = Session()
-    
+
     for instance in session.query(State).order_by(State.id):
         print('{0}: {1}'.format(instance.id, instance.name))

@@ -14,14 +14,15 @@ if __name__ == '__main__':
     Access to the database and get a state
     from the database.
     """
-    
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306:/{}'.format(argv[1], argv[2], argv[3]))
-    
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306:/{}'
+                           .format(argv[1], argv[2], argv[3]))
+
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     state = session.query(State).filter(State.id == 2).first()
     state.name = "New Mexico"
-    
+
     session.commit()
     session.close()
