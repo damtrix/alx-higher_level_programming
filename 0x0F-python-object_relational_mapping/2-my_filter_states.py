@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This script lists all states with
-a `name` starting with the letter `N`
+This script takes in an argument and
+displays all values in the states
+where `name` matches the argument
 from the database `hbtn_0e_0_usa`.
 """
 
@@ -20,8 +21,8 @@ if __name__ == '__main__':
     cur = db_connect.cursor()
 
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY \
-states.id ASC")
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY \
+states.id ASC".format(argv[4]))
 
     rows = cur.fetchall()
     for row in rows:
