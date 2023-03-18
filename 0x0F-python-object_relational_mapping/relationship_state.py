@@ -10,6 +10,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """State class
     Attributes:
@@ -17,9 +18,9 @@ class State(Base):
         id (int): The State id of the class
         name (str): The State name of the class
     """
-    
+
     __tablename__ = 'states'
-    
+
     id = Column(Integer, primary_key=True)
-    name = Column(String(128), nullable=False) 
+    name = Column(String(128), nullable=False)
     cities = relationship('City', backref='state', cascade='all, delete')
