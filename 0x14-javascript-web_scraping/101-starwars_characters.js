@@ -13,20 +13,9 @@ request(url, (error, response, body) => {
   }
   characters = JSON.parse(body).characters;
   getMyCharacter(0);
-  // for (let i = 0; i < characters.length; i++) {
-  //   request(characters[i], (error, response, body) => {
-  //     if (error) {
-  //       console.log(error);
-  //     } else {
-  //       const name = JSON.parse(body).name;
-  //       console.log(name);
-  //     }
-  //   });
-  // }
 });
 const getMyCharacter = (index) => {
   if (index === characters.length) return;
-
   request(characters[index], (error, response, body) => {
     if (error) {
       console.log(error);
